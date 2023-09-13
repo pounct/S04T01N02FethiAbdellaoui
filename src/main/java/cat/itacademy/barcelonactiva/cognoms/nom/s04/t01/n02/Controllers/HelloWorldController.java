@@ -10,16 +10,16 @@ public class HelloWorldController {
 
 	@GetMapping("/HelloWorld")
 	String saluda(@RequestParam(defaultValue = "UNKNOWN") String nom) {
-		return "Hola, " + nom + ". Estàs executant un projecte Maven";
+		return "Hola, " + nom + ". Estàs executant un projecte Gradle";
 
 	}
 
 	@GetMapping(value = { "/HelloWorld2", "/HelloWorld2/{nom}" })
 	String saluda2(@PathVariable(required = false) String nom) {
 		if (nom != null) {
-			return "Hola, " + nom + ". Estàs executant un projecte Maven";
+			return "Hola, " + nom + ". Estàs executant un projecte Gradle";
 		}
-		return "Hola, Estàs executant un projecte Maven"; // " + nom + ".
+		return "Hola, Estàs executant un projecte Gradle";
 	}
 
 }
